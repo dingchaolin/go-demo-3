@@ -16,3 +16,13 @@
 
 ## go run **.go 即可运行
 
+## hello world
+- package 名是main的 会生成一个可执行的二进制文件
+- package 名不是main的 会生成.a 静态库文件
+
+## delve调试工具
+- go get github.com/derekparker/delve/cmd/dlv
+
+## 语法
+- 没有; 编译器会自动加上;
+
