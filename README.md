@@ -23,6 +23,33 @@
 ## delve调试工具
 - go get github.com/derekparker/delve/cmd/dlv
 
+#### 错误
+- C:\GOPATH\src\github.com\derekparker\delve\pkg\proc\disasm.go:11:14: undefined: ArchInst
+- 不支持32位系统
+
 ## 语法
 - 没有; 编译器会自动加上;
 
+## launch.json 配置环境
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}",
+            "env": {
+                "GOPATH": "c://GOPATH",
+                "GOROOT": "c://Go"
+            },
+            "args": []
+        }
+    ]
+}
+```
